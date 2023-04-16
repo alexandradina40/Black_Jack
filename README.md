@@ -1,3 +1,25 @@
 # Black_Jack
 A company has asked for your help to create a demo of a Blackjack application.
 
+•Cards from 2 to 10 have their face value, while face cards (J, Q, K) are worth 10, and the Ace (A) can be worth 1 or 11.
+• Players play against a person called the Dealer, and to win they must have a higher card total than the Dealer's. If the card total exceeds 21, the player loses. If the Dealer's total exceeds 21, then everyone at the table wins, except for those who have already exceeded 21.
+• Each player is dealt 2 cards at the beginning, and the Dealer is also dealt 2 cards, but one is face down (NOTE! In a real game of Blackjack, cards are dealt one at a time to each player, and only after the second card is dealt to each player, but to simplify the problem, we will consider that players receive both cards at once, and the Dealer is the last person to receive the two cards).
+• After the cards have been dealt, each player has the right to draw a card (HIT) or stop at their current total (STAND). Players can draw as many cards as they want, but if they exceed 21, they lose. (NOTE! For simplicity, we will consider the following scenario: If the card total of the Dealer or players is less than 16, they must draw a card. If the card total is between 17-21, they must stop drawing cards. If the total exceeds 21, they lose).
+
+Functional requirements:
+
+1)If the command is "check_cards", check whether a deck of cards is rigged, normal, or prepared for blackjack. A deck of cards is considered rigged if there are cards with numbers or suits that do not exist in reality (allowed numbers are from 2 to 14, where 11 is the Ace, and allowed suits are red, black, diamond or club), and it will display "Rigged Deck". A deck of cards is considered OK if it is not rigged, all cards in it are different, and there are a total of 52 cards, and in this case it will display "OK Deck". A deck is considered good for Blackjack if it is not rigged, and in this case it will display "Prepared for Blackjack". A newline (\n) will be left after these prints.
+
+2)If the command is "shuffle_cards", the cards will be shuffled using the Linear Congruential Generator (LCG) algorithm. The generator is defined by the recurrence relation Xn+1 = (a * Xn + c) mod m. If two pairs of numbers a, c, and X0 are given from the keyboard, then a pair of indices will be generated and the cards from those positions will be swapped, and the current index will become the previous index for the generator (See example!). The constant m will represent the number of cards in the deck. This algorithm will be applied to the deck 50 times. The shuffled cards will be displayed in the format <card_number>,<card_suit>, separated by newline (\n).
+
+3)If the command is "play_game", Blackjack games will be played until EOF with n players at a table. The game will be played according to the rules stated at the beginning of the problem. It is assumed that there are NO aces in the deck! (That is, the deck will consist of 48 cards, not 52!) The deck of cards will be shuffled using the LCG algorithm described above (applied 50 times each time) at each round of Blackjack. Initially, the deck of cards is arranged in the following order: there will be 48 cards in a deck (since we don't have aces) in the order 2 red, 3 red, ..., 14 red, 2 black, ..., 14 black, 2 diems, ..., 14 diems, 2 clubs, ..., 14 clubs (Note that there is no 11!). Each round, the deck of cards will be shuffled using the LCG algorithm with the current values read from the keyboard. The stake is 10 euros per player so the winner of the round will receive 10 euros, and if they lose, they will lose 10 euros. If a player runs out of money (has less than 10 euros), they will leave the table. Finally, the remaining players at the table will be displayed in the format person_name: money_sum, separated by newline (\n).
+
+
+
+Input: The first line contains a word command, representing the sub-point you want to perform. For sub-point 1), lines of the norm <card_number>, <card_suit> are read from the keyboard until EOF, where card_number is an unsigned 8-bit integer, and card_suit is a string of up to 30 characters. For sub-point 2), 6 integers are read from the keyboard, 3 on one line and 3 on the other, representing the constants a, c, and X0. Then, cards are read until EOF in the format specified in sub-point 1). For sub-point 3), an integer n is read, which represents the number of players present at the Blackjack table. The next n lines contain the n players in the format <name> <money_sum>, where name is a string of characters representing the player's name, consisting of a single word, and money_sum represents the amount of money the player enters the table with, an unsigned integer. The next lines until EOF contain 6 values per line, representing the entries of the LCG generator for shuffling the cards in the current game.
+
+Output: The values will be displayed at the output according to the specifications in the task, without displaying any additional text in the console! Only display the requested result!
+
+
+
+
