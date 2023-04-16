@@ -1,11 +1,13 @@
 # Black_Jack
 A company has asked for your help to create a demo of a Blackjack application.
 
-## Exemple:
+## Exemple :
 
-### 1.check_cards
+###
+1.
 INPUT:
-4,diamond
+check_cards
+4,dimes
 3,red
 12,clubs
 17,black
@@ -17,9 +19,10 @@ INPUT:
 OUTPUT:
 rigged pack
 
-### 2.check_cards
+### 2.
 INPUT:
-4,diamond
+check_cards
+4,dimes
 3,red
 12,clubs
 10,black
@@ -30,16 +33,17 @@ INPUT:
 
 OUPUT :Ready for Blackjack
 
-### 3.shuffle_cards
+### 3.
 INPUT:
+shuffle_cards
 1 5 4
 2 2 3
-4,diamond
+4,dimes
 3,red
 12,clubs
 10,black
 7,red
-9,diamond
+9,dimes
 7,black
 3,red
 
@@ -47,14 +51,15 @@ OUPUT:
 7,black
 10,black
 7,red
-9,diamond
+9,dimes
 12,clubs
 3,red
 3,red
-4,diamond
+4,dimes
 
-### 4.play_game
+### 4.
 INPUT:
+play_game
 4
 Michel 100
 Marry 50
