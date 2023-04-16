@@ -304,7 +304,7 @@ int main()
                 cout<<"Ready for Blackjack\n";
         }
         else
-            cout<<"Ragged Pack\n";
+            cout<<"Rigged Pack\n";
     }
 
     uint16_t a0=0,c0=0,X0=0,a1=0,c1=0,X1=0;
