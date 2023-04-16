@@ -299,12 +299,12 @@ int main()
         if(pachet.goodForBackjack())
         {
             if(pachet.ok())
-                cout<<"Pack OK\n";
+                cout<<"OK Deck \n";
             else
-                cout<<"Ready for Blackjack\n";
+                cout<<"Prepared for Blackjack\n";
         }
         else
-            cout<<"Rigged Pack\n";
+            cout<<"Rigged Deck\n";
     }
 
     uint16_t a0=0,c0=0,X0=0,a1=0,c1=0,X1=0;
